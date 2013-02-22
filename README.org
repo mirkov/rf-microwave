@@ -1,0 +1,35 @@
+#+title: Transmission line calculations
+
+* Aim
+
+  A collection of formulas for impedance transformations along
+  loss-less co-axial transmission lines
+
+* Description
+  The equations are from the Wikipedia [[http://en.wikipedia.org/wiki/Smith_chart][article]] on the Smith Chart.
+
+  The library consists of several packages.  The ~transmission-lines~
+  package contains general formulas applicable to all transmission
+  lines.
+
+  The ~coaxial-transmission-lines~ package contains formulas
+  pertinent to coaxial transmission lines.  This package has a short
+  nickname, ~:cxtl~, and the symbols from that package should not be
+  imported, but used with the ~cxtl~ prefix.
+
+  The ~micro-strip-transmission-lines~ (nickname ~mstl~) package
+  contains formulas the micro-strip lines obtained from the following
+  [[http://www.cvel.clemson.edu/emc/calculators/TL_Calculator/index.html][web page]].
+
+
+  
+ 
+* Definitions
+  - z-0 :: characteristic impedance
+  - z-t :: normalized impedance
+  - L/h :: Inductance/unit-length
+  - C/h :: capacitance/unit-length
+  - beta :: 2pi/lambda
+  - lambda :: wavelength
+  - l :: length
+  - gamma :: reflection coefficient
