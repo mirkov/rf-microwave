@@ -1,4 +1,4 @@
-(in-package :rectangular-waveguides)
+(in-package #:rectangular.waveguides)
 
 
 (defun k-0 (f &optional (epsilon-r 1.0) (mu-r 1.0))

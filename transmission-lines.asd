@@ -13,12 +13,16 @@
 	    :components
 	    ((:file "transmission-line-package-def")
 	     (:file "init")))
+   (:module "general"
+	    :components
+	    ((:file "material-properties")))
    (:module "transmission-lines"
 	    :components
 	    ((:file "general-equations")
 	     (:file "coaxial-tl-equations")
 	     (:file "micro-strip-transmission-line")))
    (:module "waveguides"
+	    :components
 	    ((:file "rectangular-waveguides")))
-   (:module "cavities")))
+   #+skip(:module "cavities")))
 

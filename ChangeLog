@@ -1,0 +1,15 @@
+2013-03-25  Mirko Vukovic  <mirko.vukovic@us.tel.com>
+
+	* setup/transmission-line-package-def.lisp : Restructured
+	(hopefully improved) package definitions
+
+	* transmission-lines/general-equations.lisp (z-0, z-0/lossy):
+	Added general formulas for transmission line impedance, as
+	function of bulk parameters instead of geometric parameters.
+	Thus, transmission line impedance as function of geometric
+	parameters will be done in geometry specific files
+
+2013-02-26  Mirko Vukovic  <mirko.vukovic@us.tel.com>
+
+	* transmission-lines/coaxial-tl-equations.lisp (d-inner)
+	(d-outer, z-0): Bug fix.  Fixed missing factor of 2 pi.

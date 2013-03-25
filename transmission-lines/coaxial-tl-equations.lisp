@@ -2,13 +2,15 @@
 ;;; unit test values were obtained from:
 ;;; http://www.cvel.clemson.edu/emc/calculators/TL_Calculator/index.html
 
-(in-package :cx-tl)
+(in-package #:coaxial.transmission-lines)
 
 (defun z-0 (epsilon-r d-inner d-outer)
   "Impedance of a coaxial transmission line as function of the
 dielectric constant, and inner and outer diameter"
-  (* (/ +z-v+
-	(sqrt epsilon-r)) (log (/ d-outer d-inner))))
+  (* (/ +2pi+)
+     (/ +z-v+
+	(sqrt epsilon-r))
+     (log (/ d-outer d-inner))))
 
 
 (define-test z-0
@@ -50,9 +52,11 @@ d-inner, d-outer - inner and outer diameter"
 
 (defun d-outer (z-0 d-inner &optional (epsilon-r 1.0))
   (* d-inner (exp (/ z-0 (/ +z-v+
-	(sqrt epsilon-r))))))
+			    (sqrt epsilon-r)
+			    +2pi+)))))
 
 (defun d-inner (z-0 d-outer &optional (epsilon-r 1.0))
   (/ d-outer (exp (/ z-0 (/ +z-v+
-	(sqrt epsilon-r))))))
+			    (sqrt epsilon-r)
+			    +2pi+)))))
 

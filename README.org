@@ -2,20 +2,29 @@
 
 * Aim
 
-  A collection of formulas for impedance transformations along
-  loss-less co-axial transmission lines
+  A collection of formulas for analysis and design of impedance linex,
+  cavities, waveguides and antennas.
+
+
+  The package is rather incomplete at this point, and I will augment
+  it as the need arises
 
 * Description
-  The equations are from the Wikipedia [[http://en.wikipedia.org/wiki/Smith_chart][article]] on the Smith Chart.
 
-  The library consists of several packages.  The ~transmission-lines~
-  package contains general formulas applicable to all transmission
-  lines.
+  Because of overlap in symbols, the library is structured as a
+  collection of packages.  Their hierarchy is as follows:
+  - General packages
+    - ~constants.rfmw~
+    - ~material-props.rfmw~
+  - Transmission line packages
+    - ~general.transmission-lines~
+    - ~coaxial.transmission-lines~
+    - ~micro-strip.transmission-lines~
+  - Waveguides
+    - ~general.waveguides~
+    - ~rectangular.waveguides~
 
-  The ~coaxial-transmission-lines~ package contains formulas
-  pertinent to coaxial transmission lines.  This package has a short
-  nickname, ~:cxtl~, and the symbols from that package should not be
-  imported, but used with the ~cxtl~ prefix.
+
 
   The ~micro-strip-transmission-lines~ (nickname ~mstl~) package
   contains formulas the micro-strip lines obtained from the following
@@ -33,3 +42,8 @@
   - lambda :: wavelength
   - l :: length
   - gamma :: reflection coefficient
+
+* References
+  - Wikipedia entry for [[en.wikipedia.org/wiki/Transmission_line][transmission lines]]
+  - Wikipedia [[http://en.wikipedia.org/wiki/Smith_chart][article]] on the Smith Chart
+  - Clemson university transmission line [[http://www.cvel.clemson.edu/emc/calculators/TL_Calculator/index.html][calculator]]
